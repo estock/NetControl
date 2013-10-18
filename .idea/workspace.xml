@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc5f5968-e386-4c5b-85c4-9bba40a97029" name="Default" comment="" />
+    <list default="true" id="fc5f5968-e386-4c5b-85c4-9bba40a97029" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/robot.py" afterPath="$PROJECT_DIR$/python/robot.py" />
+    </list>
     <ignored path="NetControl.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="fc5f5968-e386-4c5b-85c4-9bba40a97029" time="1382047833860" ignored="false" />
@@ -32,7 +34,7 @@
       <file leaf-file-name="robot.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="0" selection-end="886" vertical-scroll-proportion="0.56915545">
+            <state line="33" column="10" selection-start="924" selection-end="924" vertical-scroll-proportion="0.60587513">
               <folding />
             </state>
           </provider>
@@ -351,7 +353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="0" selection-end="886" vertical-scroll-proportion="0.56915545">
+        <state line="33" column="10" selection-start="924" selection-end="924" vertical-scroll-proportion="0.60587513">
           <folding />
         </state>
       </provider>
