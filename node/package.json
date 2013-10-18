@@ -1,0 +1,11 @@
+{
+"name": "netcontrol",
+"description": "Control Shit In Browser",
+"version": "1.0.0",
+"dependencies": {
+"socket.io": "*"
+},
+"scripts": {
+"start": "server.js"
+}
+}
