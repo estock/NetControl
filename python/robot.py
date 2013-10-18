@@ -19,9 +19,9 @@ def main():
         while True:
         # keep websocket alive by sending ping on interval
 
-        with SocketIO('ws://node.labsmb.com', 8990) as socketIO:
-            socketIO.emit('bbb', {'xxx': 'yyy'}, on_bbb_response)
-            socketIO.wait_for_callbacks(seconds=1)
+            with SocketIO('ws://node.labsmb.com', 8990) as socketIO:
+                socketIO.emit('bbb', {'xxx': 'yyy'}, on_bbb_response)
+                socketIO.wait_for_callbacks(seconds=1)
 
     except KeyboardInterrupt:
         piClient.close()
