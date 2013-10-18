@@ -29,3 +29,6 @@ def main():
 
 def on_bbb_response(*args):
     print 'on_bbb_response', args
+
+if __name__ == "__main__":
+    main()
