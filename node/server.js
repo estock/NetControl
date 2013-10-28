@@ -9,13 +9,10 @@ var app = require('http').createServer(handler),
         parser: serialport.parsers.readline("\n")
     });
 
-
+// ports 8000 - 9000 are open on amazon server use 8990
 app.listen(8990);
-console.log("Listening on http://raspberrypi:8080...");
+console.log("Listening on port 8990");
 
-//serial.write("hellz!")
-
-// directs page requests to html files
 
 function handler (req, res) {
     console.log("handle")
@@ -24,52 +21,26 @@ function handler (req, res) {
         function (err, data) {
             if (err) {
                 res.writeHead(500);
-                return res.end('Error loading index.html');
+                return res.end('An Error loading index.html');
             }
             res.writeHead(200);
             res.end(data);
         });
 }
 
-
-
 io.sockets.on('connection', function (socket) {
     console.log("got data");
     socket.emit('news', { hello: 'world' });
+    socket.emit('command', { hello: 'world' });
     socket.on('my other event', function (data) {
         console.log(data);
     });
 });
 
-// this handles socket.io comm from html files
+// TODO add on disconnet
+// TODO impliment protocalls
 
-/*
-io.sockets.on('connection', function(socket) {
-    socket.send('connected...');
-
-    socket.on('message', function(data) {
-        console.log("from client: " + data);
-        //serial.write(data + "\n");
-
-        if (data == 'turn on') {
-            console.log('+');
-
-            socket.broadcast.send("let there be light!");
-        }
-        if (data == 'turn off') {
-            console.log('-');
-
-            socket.broadcast.send("who turned out the light?");
-        }
-        return;
-    });
-
-    socket.on('disconnect', function() {
-        socket.send('disconnected...');
-    });
-});
-*/
-
+\
 serial.on("data", function (data) {
     console.log("from arduino: "+data);
 });
